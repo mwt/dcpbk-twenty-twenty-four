@@ -138,7 +138,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-system-inter)"
+			"fontFamily": "var(--wp--preset--font-family--system-inter)"
 		}
 	},
 	"version": 2,
