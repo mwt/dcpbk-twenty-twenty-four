@@ -1,0 +1,137 @@
+{
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"color": "#f7fbff",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Base / Two",
+					"slug": "base-2"
+				},
+				{
+					"color": "#111111",
+					"name": "Contrast",
+					"slug": "contrast"
+				},
+				{
+					"color": "#102542",
+					"name": "Contrast / Two",
+					"slug": "contrast-2"
+				},
+				{
+					"color": "#214f8c",
+					"name": "Contrast / Three",
+					"slug": "contrast-3"
+				},
+				{
+					"color": "#ebaa52",
+					"name": "Accent",
+					"slug": "accent"
+				},
+				{
+					"color": "#c2a990",
+					"name": "Accent / Two",
+					"slug": "accent-2"
+				},
+				{
+					"color": "#d8613c",
+					"name": "Accent / Three",
+					"slug": "accent-3"
+				},
+				{
+					"color": "#95bf8f",
+					"name": "Accent / Four",
+					"slug": "accent-4"
+				},
+				{
+					"color": "#5bc0eb",
+					"name": "Accent / Five",
+					"slug": "accent-5"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "1280px"
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "Inter, Roboto, Helvetica Neue, Arial Nova, Nimbus Sans, Arial, sans-serif",
+					"name": "System Sans-serif",
+					"slug": "system-sans-serif"
+				}
+			]
+		}
+	},
+	"styles": {
+		"css": "/* Register button logic (show only on pages with mw memberonly message) */\n#register-button {\n    display: none;\n}\n\n:root:has(.memberonly) #member-area-button {\n    display: none;\n}\n\n:root:has(.memberonly) #register-button {\n    display: inline-block;\n}\n\n#nav-buttons a {\n    text-wrap: nowrap;\n}\n\n/* Float mobile nav menu to the right */\n@media only screen and (max-width: 600px) {\n  #greater-nav-menu {\n    flex-direction: row-reverse;\n    justify-content: space-between;\n    flex-grow: 1;\n  }\n}\n\n/* Keys instead of asterisks on headers */\n.is-style-asterisk:before {\n  content: '';\n  width: 15px;\n  height: 48px;\n  background: var(--wp--preset--color--accent, currentColor);\n  clip-path: path('M7.5 0a3.493 3.493 0 0 0-3.492 3.492 3.493 3.493 0 0 0 2.03 3.168v1.902H0v16.39h6v1.65h.421v3.986H8.58v-3.986H9v-1.65h6V8.562H8.963V6.66a3.493 3.493 0 0 0 2.03-3.168A3.493 3.493 0 0 0 7.5 0zm0 1.309a2.183 2.183 0 0 1 2.183 2.183 2.183 2.183 0 0 1-.72 1.612v-.056h-.384v-.66H6.42v.66h-.383v.056a2.183 2.183 0 0 1-.721-1.612A2.183 2.183 0 0 1 7.5 1.31z');\n  display: block;\n}\n\n/* Hover color for base background links */\n.has-base-background-color.wp-block-button__link:hover {\nbackground-color: transparent !important;\n    color: var(--wp--preset--color--base) !important;\n}\n\n.has-base-background-color.wp-block-button__link {\n    border: 1px solid var(--wp--preset--color--base);\n}",
+		"elements": {
+			"button": {
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast-3)",
+						"text": "var(--wp--preset--color--base)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast-2)",
+						"text": "var(--wp--preset--color--base)"
+					},
+					"outline": {
+						"color": "var(--wp--preset--color--contrast-3)",
+						"offset": "2px"
+					},
+					"border": {
+						"color": "var(--wp--preset--color--contrast-2)"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast-2)",
+						"text": "var(--wp--preset--color--base)"
+					},
+					"border": {
+						"color": "var(--wp--preset--color--contrast-2)"
+					}
+				},
+				"border": {
+					"radius": ".33rem",
+					"color": "var(--wp--preset--color--contrast-3)"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--contrast-3)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "0.6rem",
+						"left": "1rem",
+						"right": "1rem",
+						"top": "0.6rem"
+					}
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontStyle": "normal",
+					"fontWeight": "500"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontStyle": "normal",
+					"fontWeight": "500"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--system-sans-serif)"
+		}
+	},
+	"version": 2,
+	"$schema": "https://schemas.wp.org/wp/6.5/theme.json"
+}
