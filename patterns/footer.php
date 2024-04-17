@@ -49,7 +49,7 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><?php echo __(' Proudly powered by <a rel="nofollow" href="https://wordpress.org">WordPress</a> ', 'twentytwentyfour');?></p>
+<p class="has-small-font-size"><?php echo __( 'Love of Learning is the Guide of Life' , 'twentytwentyfour');?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
