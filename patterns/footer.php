@@ -49,7 +49,7 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><?php echo __( 'Love of Learning is the Guide of Life' , 'twentytwentyfour');?></p>
+<p class="has-small-font-size"><?php echo __('Looking to <a href="https://www.dcpbk.org/contact/" data-type="page" data-id="239">contact us</a> or <a href="https://www.dcpbk.org/donate/" data-type="page" data-id="1081">donate</a>?', 'twentytwentyfour');?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
