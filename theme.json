@@ -63,6 +63,19 @@
 					"fontFamily": "Inter, Roboto, Helvetica Neue, Arial Nova, Nimbus Sans, Arial, sans-serif",
 					"name": "Inter System Font",
 					"slug": "system-inter"
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "\"Archivo Narrow\"",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": "file:./assets/fonts/archivo-narrow/archivo-narrow_500.woff2"
+						}
+					],
+					"fontFamily": "\"Archivo Narrow\", sans-serif-condensed, sans-serif",
+					"name": "Archivo Narrow",
+					"slug": "heading"
 				}
 			]
 		}
@@ -132,6 +145,7 @@
 			},
 			"heading": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontStyle": "normal",
 					"fontWeight": "500"
 				}
