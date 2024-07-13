@@ -43,7 +43,7 @@ if (!function_exists('dcpbktwentytwentyfour_return_custom_field')) {
 add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_script(
         'fzs-force-shortcodes-setting',
-        get_template_directory_uri() . '/assets/js/force-shortcodes-setting.js',
+        get_theme_file_uri('assets/js/force-shortcodes-setting.js'),
         array('wp-blocks', 'wp-element', 'wp-editor'),
         wp_get_theme()->get('Version')
     );
