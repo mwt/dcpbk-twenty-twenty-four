@@ -38,10 +38,14 @@ if (!function_exists('dcpbktwentytwentyfour_return_custom_field')) {
     add_shortcode('metalookup', 'dcpbktwentytwentyfour_return_custom_field');
 }
 
-// Handle the blocks with "forceShortcodes" attribute (use this attribute inside query loops!)
+// Handle the blocks named "Forced Shortcode" (use this attribute inside query loops!)
+// Usage example:
+// <!-- wp:shortcode {"metadata":{"name":"Forced Shortcode"}} -->
+// <div>[metalookup field="position" default="Board Member"]</div>
+// <!-- /wp:shortcode -->
 // Source: https://gist.github.com/frzsombor/c53446050ee0bb5017e29b9afb039309
 add_filter('render_block', function ($block_content, $block, $instance) {
-    if (isset($block['attrs']) && !empty($block['attrs']['forceShortcodes'])) {
+    if (isset($block['attrs']) && array_key_exists('name', $block['attrs']['metadata']) && $block['attrs']['metadata']['name'] === 'Forced Shortcode') {
         return do_shortcode($block_content);
     }
     return $block_content;
