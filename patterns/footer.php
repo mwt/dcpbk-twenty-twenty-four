@@ -45,7 +45,10 @@
 
 <!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"layout":{"type":"flex"}} -->
-<div class="wp-block-group"><!-- wp:site-title {"fontSize":"small"} /--></div>
+<div class="wp-block-group"><!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">© 2024</p>
+<!-- /wp:paragraph -->
+<!-- wp:site-title {"level":0,"fontSize":"small"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
