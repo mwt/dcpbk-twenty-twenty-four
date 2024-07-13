@@ -38,18 +38,8 @@ if (!function_exists('dcpbktwentytwentyfour_return_custom_field')) {
     add_shortcode('metalookup', 'dcpbktwentytwentyfour_return_custom_field');
 }
 
-// Enqueue the force shortcode file
+// Handle the blocks with "forceShortcodes" attribute (use this attribute inside query loops!)
 // Source: https://gist.github.com/frzsombor/c53446050ee0bb5017e29b9afb039309
-add_action('enqueue_block_editor_assets', function () {
-    wp_enqueue_script(
-        'fzs-force-shortcodes-setting',
-        get_theme_file_uri('assets/js/force-shortcodes-setting.js'),
-        array('wp-blocks', 'wp-element', 'wp-editor'),
-        wp_get_theme()->get('Version')
-    );
-});
-
-// Handle the blocks with "forceShortcodes" attribute (chage attribute if you changed it in the JS)
 add_filter('render_block', function ($block_content, $block, $instance) {
     if (isset($block['attrs']) && !empty($block['attrs']['forceShortcodes'])) {
         return do_shortcode($block_content);
