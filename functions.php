@@ -45,7 +45,7 @@ if (!function_exists('dcpbktwentytwentyfour_return_custom_field')) {
 // <!-- /wp:shortcode -->
 // Source: https://gist.github.com/frzsombor/c53446050ee0bb5017e29b9afb039309
 add_filter('render_block', function ($block_content, $block, $instance) {
-    if (isset($block['attrs']) && array_key_exists('name', $block['attrs']['metadata']) && $block['attrs']['metadata']['name'] === 'Forced Shortcode') {
+    if (isset($block['attrs']) && isset($block['attrs']['metadata']) && isset($block['attrs']['metadata']['name']) && $block['attrs']['metadata']['name'] === 'Forced Shortcode') {
         return do_shortcode($block_content);
     }
     return $block_content;
