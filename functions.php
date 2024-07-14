@@ -50,3 +50,19 @@ add_filter('render_block', function ($block_content, $block, $instance) {
     }
     return $block_content;
 }, 10, 3);
+
+// WP Total Cache: Set Cache-Control and Expires headers for HTML files
+// Set Cache-Control and Expires to 1 hour
+add_filter('wpsc_htaccess_mod_headers', function ($headers) {
+    $headers['Cache-Control'] = 'max-age=3600, must-revalidate';
+    return $headers;
+}, 1);
+
+add_filter('wpsc_htaccess_mod_expires', function ($expiry_rules) {
+    $expiry_rules = array_filter($expiry_rules, function ($rule) {
+        return strpos($rule, 'ExpiresByType') === false;
+    });
+
+    $expiry_rules[] = 'ExpiresByType text/html "access plus 1 hour"';
+    return $expiry_rules;
+}, 1);
