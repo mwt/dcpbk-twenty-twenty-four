@@ -28,11 +28,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><?php echo __('<a href="https://twitter.com/dcphibetakappa">Twitter/X</a>', 'twentytwentyfour');?></p>
+<p><?php echo __('<a href="https://x.com/dcphibetakappa">Twitter/X</a>', 'twentytwentyfour');?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p><?php echo __('<a href="https://www.linkedin.com/groups/3890220/" data-type="link" data-id="https://www.linkedin.com/groups/3890220/">LinkedIn</a>', 'twentytwentyfour');?></p>
+<p><?php echo __('<a href="https://www.linkedin.com/company/dcphibetakappa/" data-type="link" data-id="https://www.linkedin.com/groups/3890220/">LinkedIn</a>', 'twentytwentyfour');?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
