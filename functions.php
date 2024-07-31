@@ -53,6 +53,12 @@ add_filter('render_block', function ($block_content, $block, $instance) {
     return $block_content;
 }, 10, 3);
 
+// Disable Cloudflare Cache on nocache_headers (for MembershipWorks)
+add_filter('nocache_headers', function ($headers) {
+    return ['cdn-cache-control' =>  'no-cache'] + $headers;
+});
+
+/*
 // WP Total Cache: Set Cache-Control and Expires headers for HTML files
 // Set Cache-Control and Expires to 1 hour
 add_filter('wpsc_htaccess_mod_headers', function ($headers) {
@@ -69,6 +75,7 @@ add_filter('wpsc_htaccess_mod_expires', function ($expiry_rules) {
     $expiry_rules[] = 'ExpiresByType text/html "access plus 1 minute"';
     return $expiry_rules;
 }, 1);
+*/
 
 /****************************************
  * The below are snippets from WPCode
