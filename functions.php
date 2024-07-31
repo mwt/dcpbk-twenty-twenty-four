@@ -57,7 +57,7 @@ add_filter('render_block', function ($block_content, $block, $instance) {
 // Set Cache-Control and Expires to 1 hour
 add_filter('wpsc_htaccess_mod_headers', function ($headers) {
     $headers['Cache-Control'] = 'max-age=60, must-revalidate';
-    $headers['CDN-Cache-Control'] = 'max-age=3600, stale-while-revalidate=86400';
+    $headers['CDN-Cache-Control'] = 'max-age=14400, stale-while-revalidate=31536000';
     return $headers;
 }, 1);
 
