@@ -55,7 +55,9 @@ add_filter('render_block', function ($block_content, $block, $instance) {
 
 // Disable Cloudflare Cache on nocache_headers (for MembershipWorks)
 add_filter('nocache_headers', function ($headers) {
-    return ['cdn-cache-control' =>  'no-cache'] + $headers;
+    return [
+        'cdn-cache-control' =>  isset($headers['cache-control']) ? $headers['cache-control'] : 'no-cache, must-revalidate, max-age=0'
+    ] + $headers;
 });
 
 /*
