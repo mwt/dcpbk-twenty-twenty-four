@@ -56,7 +56,14 @@ add_filter('render_block', function ($block_content, $block, $instance) {
 // Disable Cloudflare Cache on nocache_headers (for MembershipWorks)
 add_filter('nocache_headers', function ($headers) {
     return [
-        'cdn-cache-control' =>  isset($headers['cache-control']) ? $headers['cache-control'] : 'no-cache, must-revalidate, max-age=0'
+        'cdn-cache-control' =>  $headers['cache-control'] ?? 'no-cache, must-revalidate, max-age=0'
+    ] + $headers;
+});
+
+// Set CDN-Cache-Control header same as Cache-Control if defined or default to 4h (+1Y stale-while-revalidate)
+add_filter('wp_headers', function ($headers) {
+    return [
+        'cdn-cache-control' =>  $headers['cache-control'] ?? 'max-age=14400, stale-while-revalidate=31536000'
     ] + $headers;
 });
 
