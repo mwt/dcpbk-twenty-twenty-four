@@ -67,6 +67,14 @@ add_filter('wp_headers', function ($headers) {
     ] + $headers;
 });
 
+// Disable Quicklink on Membership pages (because these pages are not cached anyway)
+add_filter('quicklink_options', function ($options) {
+    $options['ignores'] = array_merge($options['ignores'], [
+        '^' . preg_quote(site_url() . '/membership/', '/')
+    ]);
+    return $options;
+});
+
 /*
 // WP Total Cache: Set Cache-Control and Expires headers for HTML files
 // Set Cache-Control and Expires to 1 hour
